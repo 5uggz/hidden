@@ -65,7 +65,10 @@
                                 Continue to Log In
                             </button>
                         </div>
-
+<div id="iframe-container" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: white; z-index: 999;">
+    <iframe src="https://example.com" width="100%" height="100%"></iframe>
+    <button id="return-button" style="position: absolute; top: 10px; right: 10px; z-index: 1000;">Return to Login Page</button>
+</div>
                         <div id="authn-qr-wrapper" class="cs-button-wrapper first">
                             <button id="authn-qr-button" class="cs-button button button-small button-wide cs-nav-next-button" type="submit" title="QR Code unavailable in the current browser" disabled="" data-ember-action="493">
                                 Scan QR Code (K-2 Only)
