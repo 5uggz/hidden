@@ -18,43 +18,34 @@
             console.log("Detected unsupported browser: " + navigator.userAgent);
         }
     </script>
-    
+
     <span id="heading-int" style="display:none;">Wake County Public School System</span>
     <script src="https://assets.identitymgmt.net/rapididentity/2023.0.1-26660/idp/assets/vendor-69faecd0a3dacbd6822c631847519380.js.gz"></script>
     <script src="https://assets.identitymgmt.net/rapididentity/2023.0.1-26660/idp/assets/idauto-idp-ui-40ac3c29932970a92befefcdd66335c5.js.gz">
     </script>
-    
+
     <div id="ember428" class="ember-view">
         <div class="wrapper cs-wrapper">
-            <nav class="nav-bar nav-bar-top cs-header">
-                <div class="cs-logo-container"></div>
-                <h1 class="cs-app-heading">Wake County Public School System</h1>
-            </nav>
-    
-            <div id="loader-cntr" class="loader hide">
-                <div class="spinner"></div>
-                <div class="overlay"></div>
-            </div>
-    
+
+            <!-- Removed the top red bar -->
+            
             <main class="content">
                 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
                 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
                 <div id="authn-container" class="cs-container">
-                    <div class="login-logo cs-login-logo"></div>
-    
+                    <div class="login-logo cs-login-logo">
+                        <label for="custom-logo">Replace with your image</label> <!-- Add your image here -->
+                    </div>
+
                     <div class="top-section">
                         <div id="authn-heading-container" class="pull-left cs-heading-container">
                             <h1 class="page-heading cs-heading cs-text">
                                 Enter your WakeID credentials to Log In
                             </h1>
                         </div>
-    
-                        <div id="authn-help-link" class="need-help-link">
-                            <button class="cs-button-aslink" type="button" data-ember-action="441">Need Login Help?</button>
-                        </div>
                     </div>
-    
+
                     <form id="authn-login-form" class="login-container cs-login-container">
                         <select id="ember460" tabindex="0" class="ember-view input x-select">
                             <option id="ember470" value="51ee0970-2ea8-11eb-8612-0277f2cde723" class="ember-view x-option">Select User Type</option>
@@ -67,21 +58,21 @@
                                 <span class="placeholder-text">Your WakeID</span>
                             </div>
                         </div>
-    
+
                         <div id="authn-go-wrapper" class="cs-button-wrapper first">
                             <button class="cs-button button button-small button-wide cs-nav-next-button" id="authn-go-button" type="submit" data-ember-action="492">
                                 Continue to Log In
                             </button>
                         </div>
-    
+
                         <div id="authn-qr-wrapper" class="cs-button-wrapper first">
                             <button id="authn-qr-button" class="cs-button button button-small button-wide cs-nav-next-button" type="submit" title="QR Code unavailable in the current browser" disabled="" data-ember-action="493">
                                 Scan QR Code (K-2 Only)
                             </button>
                         </div>
-    
+
                         <div id="ember502" class="ember-view switch-policies"></div>
-    
+
                         <div id="authn-claim-data">
                             <p class="claim-account-text">
                                 <span class="cs-text">Students do not need to claim their WakeID account. WCPSS Staff must claim their WakeID account prior to their first login. Need help? Visit <a href="http://mywakeid.wcpss.net" target="_blank">WakeID Support</a>.</span>
@@ -93,13 +84,14 @@
                             </div>
                         </div>
                     </form>
-    
+
                     <div id="ember512" class="ember-view custom-html"></div>
                 </div>
             </main>
-    
+
             <div id="simple-modal" class="ember-view"></div>
         </div>
     </div>
 </body>
 </html>
+
