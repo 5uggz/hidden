@@ -1,102 +1,15 @@
 <!DOCTYPE html>
 <html class="wf-robotocondensed-n4-active wf-robotocondensed-n7-active wf-robotocondensed-n3-active wf-active">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WakeID Portal</title>
-    <link rel="shortcut icon" href="https://wakeid2.wcpss.net:443/files/favicon.ico">
-    <link rel="stylesheet" href="https://assets.identitymgmt.net/rapididentity/2023.0.1-26660/idp/assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css.gz">
-    <link rel="stylesheet" href="https://assets.identitymgmt.net/rapididentity/2023.0.1-26660/idp/assets/idauto-idp-ui-c17a83b64e039b14c218d5c258d0c855.css.gz">
-    <link rel="stylesheet" href="/api/rest/authn/custom-style.css.gz">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&amp;subset=latin" media="all">
+    <!-- ... (your existing head content) ... -->
 </head>
 <body class="cs-body antialiased ember-application">
-    <script>
-        if (/MSIE/i.test(navigator.userAgent)) {
-            console.log("Detected unsupported browser: " + navigator.userAgent);
-        }
-    </script>
+    <!-- ... (your existing body content) ... -->
 
-    <span id="heading-int" style="display:none;">Wake County Public School System</span>
-    <script src="https://assets.identitymgmt.net/rapididentity/2023.0.1-26660/idp/assets/vendor-69faecd0a3dacbd6822c631847519380.js.gz"></script>
-    <script src="https://assets.identitymgmt.net/rapididentity/2023.0.1-26660/idp/assets/idauto-idp-ui-40ac3c29932970a92befefcdd66335c5.js.gz">
-    </script>
-
-    <div id="ember428" class="ember-view">
-        <div class="wrapper cs-wrapper">
-
-            <!-- Removed the top red bar -->
-
-            <main class="content">
-                <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-                <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-                <div id="authn-container" class="cs-container">
-                    <div class="login-logo cs-login-logo">
-                        <img src="WakeID.png" alt="Wake County School Logo"> <!-- Add your image here -->
-                    </div>
-
-                    <div class="top-section">
-                        <div id="authn-heading-container" class="pull-left cs-heading-container">
-                            <h1 class="page-heading cs-heading cs-text">
-
-                                Enter your WakeID credentials to Log In
-                            </h1>
-                        </div>
-                    </div>
-
-                    <form id="authn-login-form" class="login-container cs-login-container">
-                        <select id="ember460" tabindex="0" class="ember-view input x-select">
-                            <option id="ember470" value="51ee0970-2ea8-11eb-8612-0277f2cde723" class="ember-view x-option">Select User Type</option>
-                            <option id="ember472" value="internal" class="ember-view x-option">Staff</option>
-                            <option id="ember474" value="8e14a77b-2f8a-4047-b703-513997e28dac" class="ember-view x-option">Student</option>
-                        </select>
-                        <div id="authn-username-wrapper">
-                            <div id="authn-username-input" class="ember-view placeholder-container">
-                                <input id="identification" placeholder="Your WakeID" aria-label="Your WakeID" class="input placeholder-input ember-view ember-text-field">
-                                <span class="placeholder-text">Your WakeID</span>
-                            </div>
-                        </div>
-
-                        <div id="authn-go-wrapper" class="cs-button-wrapper first">
-                            <button class="cs-button button button-small button-wide cs-nav-next-button" id="authn-go-button" type="button" data-ember-action="492">
-                                Continue to Log In
-                            </button>
-                        </div>
-
-                        <div id="authn-qr-wrapper" class="cs-button-wrapper first">
-                            <button id="authn-qr-button" class="cs-button button button-small button-wide cs-nav-next-button" type="submit" title="QR Code unavailable in the current browser" disabled="" data-ember-action="493">
-                                Scan QR Code (K-2 Only)
-                            </button>
-                        </div>
-
-                        <div id="ember502" class="ember-view switch-policies"></div>
-
-                        <div id="authn-claim-data">
-                            <p class="claim-account-text">
-                                <span class="cs-text">Students do not need to claim their WakeID account. WCPSS Staff must claim their WakeID account prior to their first login. Need help? Visit <a href="http://mywakeid.wcpss.net" target="_blank">WakeID Support</a>.</span>
-                            </p>
-                            <div id="authn-claim-wrapper" class="cs-button-wrapper">
-                                <button id="authn-claim-button" data-icon="arrow-r" data-iconpos="right" class="cs-button button button-small button-wide" type="button" data-ember-action="503">
-                                    Claim My Account
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <div id="ember512" class="ember-view custom-html"></div>
-                </div>
-            </main>
-
-            <div id="simple-modal" class="ember-view"></div>
-        </div>
-    </div>
-
-    <div id="iframe-container" style="display: none;">
-        <iframe src="https://example.com" width="100%" height="500"></iframe>
-        <button id="return-button">Return to Login Page</button>
+    <!-- Add this iframe container -->
+    <div id="iframe-container" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: white; z-index: 999;">
+        <iframe src="https://example.com" width="100%" height="100%"></iframe>
+        <button id="return-button" style="position: absolute; top: 10px; right: 10px; z-index: 1000;">Return to Login Page</button>
     </div>
 
     <script>
@@ -112,5 +25,5 @@
             iframeContainer.style.display = "none";
         });
     </script>
-</
-
+</body>
+</html>
