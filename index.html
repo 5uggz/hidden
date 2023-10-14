@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html class="wf-robotocondensed-n4-active wf-robotocondensed-n7-active wf-robotocondensed-n3-active wf-active">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WakeID Portal</title>
-    <link rel="shortcut icon" href="https://wakeid2.wcpss.net:443/files/favicon.ico">
-    <link rel="stylesheet" href="https://assets.identitymgmt.net/rapididentity/2023.0.1-26660/idp/assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css.gz">
-    <link rel="stylesheet" href="https://assets.identitymgmt.net/rapididentity/2023.0.1-26660/idp/assets/idauto-idp-ui-c17a83b64e039b14c218d5c258d0c855.css.gz">
-    <link rel="stylesheet" href="/api/rest/authn/custom-style.css.gz">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&amp;subset=latin" media="all">
+    <!-- ... (your existing head content) ... -->
 </head>
 <body class="cs-body antialiased ember-application">
+    <!-- ... (your existing body content) ... -->
+
     <script>
         if (/MSIE/i.test(navigator.userAgent)) {
             console.log("Detected unsupported browser: " + navigator.userAgent);
@@ -62,7 +55,7 @@
 
                         <div id="authn-go-wrapper" class="cs-button-wrapper first">
                             <button class="cs-button button button-small button-wide cs-nav-next-button" id="authn-go-button" type="button" data-ember-action="492">
-                                Continue to Log In
+                                <a href="https://example.com" target="_blank">Continue to Log In</a>
                             </button>
                         </div>
 
@@ -93,25 +86,5 @@
             <div id="simple-modal" class="ember-view"></div>
         </div>
     </div>
-
-    <!-- Add this iframe container -->
-    <div id="iframe-container" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: white; z-index: 999;">
-        <iframe src="https://example.com" width="100%" height="100%"></iframe>
-        <button id="return-button" style="position: absolute; top: 10px; right: 10px; z-index: 1000;">Return to Login Page</button>
-    </div>
-
-    <script>
-        const authnGoButton = document.getElementById("authn-go-button");
-        const iframeContainer = document.getElementById("iframe-container");
-        const returnButton = document.getElementById("return-button");
-
-        authnGoButton.addEventListener("click", function () {
-            iframeContainer.style.display = "block";
-        });
-
-        returnButton.addEventListener("click", function () {
-            iframeContainer.style display = "none";
-        });
-    </script>
 </body>
 </html>
